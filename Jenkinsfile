@@ -18,5 +18,15 @@ pipeline {
                 echo 'SIT Test'
             }
         }
+    } post {
+        always{
+            echo 'Im awesome. I runs always'
+        }
+        success{
+            echo 'I run when you are in the good mood. LOL!!!'
+        }
+        failure{
+            echo 'You must be sad if you see me. LOL!!!'
+        }
     }
 }
