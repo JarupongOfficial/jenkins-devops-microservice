@@ -12,7 +12,7 @@ pipeline {
         }
         stage('DEV Test') {
             steps {
-                "echo 'DEV Test"
+                echo "DEV Test"
             }
         }
         stage('SIT Test') {
