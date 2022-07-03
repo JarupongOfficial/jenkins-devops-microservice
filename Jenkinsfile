@@ -4,17 +4,17 @@ pipeline {
 
     stages {
         stage('Build') {
-            setps {
+            steps {
                 echo 'Build'
             }
         }
         stage('DEV Test') {
-            setps {
+            steps {
                 echo 'DEV Test'
             }
         }
         stage('SIT Test') {
-            setps {
+            steps {
                 echo 'SIT Test'
             }
         }
