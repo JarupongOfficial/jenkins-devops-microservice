@@ -44,11 +44,12 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
-        
+
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker build("docker build -t jarupongofficial/currency-exchange-devops:${env.BUILD_TAG}")
+                    //sh "docker build -t jarupongofficial/currency-exchange-devops:${env.BUILD_TAG}")
+                    dockerImage = docker.build("jarupongofficial/currency-exchange-devops:${env.BUILD_TAG}")
                 }
             }
         }
